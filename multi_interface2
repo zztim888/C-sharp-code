@@ -1,0 +1,46 @@
+using System;
+
+namespace MyApp
+{
+    interface IFirstInterface
+    {
+        void myMethod();
+    }
+    interface ISecondInterface
+    {
+        void myOtherMethod();
+    }
+    interface IThirdInterface
+    {
+        void myThirdMethod();
+    }
+    class DemoClass : IFirstInterface,ISecondInterface,IThirdInterface
+    {
+        public void myMethod()
+        {
+            Console.WriteLine("say something...");
+        }
+        public void myOtherMethod()
+        {
+            Console.WriteLine("say something here...");
+        }
+        public void myThirdMethod()
+        {
+            Console.WriteLine("say something here it\'s got to be long...");
+        }
+
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            DemoClass Obj = new DemoClass();
+            Obj.myMethod();
+            Obj.myOtherMethod();
+             Obj.myThirdMethod();
+
+        } 
+    }
+
+}
